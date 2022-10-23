@@ -1,45 +1,26 @@
 import React from "react";
-import { AsideRightCard, ProfileToFollow, News } from "../components";
-import { ReactComponent as HomeIcon } from "../assets/home.svg";
-import { ReactComponent as ExploreIcon } from "../assets/explore.svg";
-import { ReactComponent as NotificationsIcon } from "../assets/notifications.svg";
+import {
+  AsideRightCard,
+  ProfileToFollow,
+  News,
+  TwitterLinks,
+} from "../components";
 
-const links = [
-  {
-    icon: HomeIcon,
-    title: "Home",
-  },
-  {
-    icon: ExploreIcon,
-    title: "Explore",
-  },
-  {
-    icon: NotificationsIcon,
-    title: "Notifications",
-  },
-];
-
-const TwitterLink = ({ Icon, title }) => {
-  return (
-    <button className="flex space-x-2">
-      {/* callback() */}
-      <Icon className="fill-white h-6 w-6" />
-      <span>{title}</span>
-    </button>
-  );
-};
+// const TwitterLink = ({ Icon, title }) => {
+//   return (
+//     <button className="flex space-x-2">
+//       {/* callback() */}
+//       <Icon className="fill-white h-6 w-6" />
+//       <span>{title}</span>
+//     </button>
+//   );
+// };
 
 export const AppLayout = () => {
   return (
-    <section className="grid grid-cols-[1fr_1.5fr_1fr]">
-      <aside>
-        <ul>
-          {links.map((link) => (
-            <li key={link.title}>
-              <TwitterLink Icon={link.icon} title={link.title} />
-            </li>
-          ))}
-        </ul>
+    <section className="grid grid-cols-[1fr_1.5fr_1fr] pt-10">
+      <aside className="w-[250px] justify-self-end">
+        <TwitterLinks />
       </aside>
       <main></main>
       <aside className="w-[350px] flex flex-col space-y-5">
