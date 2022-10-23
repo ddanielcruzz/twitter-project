@@ -1,6 +1,10 @@
 import React from "react";
 import { ProfileToFollow } from "../components/ProfileToFollow";
 
+const AsideRightCard = ({ children }) => {
+  <article></article>;
+};
+
 export const AppLayout = () => {
   return (
     <section className="grid grid-cols-[1fr_1.5fr_1fr]">
